@@ -1,178 +1,155 @@
-# 🎬 Netflix Content Analytics Dashboard
+# Netflix Content Analytics Dashboard
 
-**Interactive Data Analytics Project | Python • Pandas • Streamlit • Plotly**
+An interactive data analytics project using Python, Pandas, Streamlit, and Plotly.
 
-## 📌 Project Overview
+## 📌 About the Project
 
-The Netflix Content Analytics Dashboard is an interactive data analytics application developed to explore Netflix's movies and TV shows catalog.
+The **Netflix Content Analytics Dashboard** is an interactive data analytics project developed to explore and analyze Netflix movies and TV shows. It helps identify patterns and trends in content distribution, genres, ratings, release years, and country-wise availability.
 
-The project uses data analysis and visualization techniques to identify patterns in content distribution, release years, genres, countries, maturity ratings, and content duration. The dashboard presents these findings through interactive charts, summary metrics, filters, and a searchable content explorer.
-
-The main objective is to transform raw catalog data into meaningful insights through a simple and user-friendly interface.
+The dashboard presents data through interactive charts and visualizations, making it easier to understand Netflix's content library.
 
 ## 🎯 Project Objectives
 
 - Analyze the distribution of movies and TV shows.
-- Explore content release trends and Netflix catalog addition patterns.
-- Identify the most frequently listed genres.
-- Analyze the geographical distribution of content.
-- Examine maturity ratings and content duration.
-- Provide interactive filters and title-level exploration.
-- Present analytical findings using visualizations and summary metrics.
+- Explore content trends based on release years.
+- Identify the distribution of different genres.
+- Analyze content ratings and classifications.
+- Explore country-wise content distribution.
+- Present data through interactive visualizations.
 
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| Python | Core programming and analytical logic |
-| Pandas | Data cleaning, transformation, and analysis |
-| Streamlit | Interactive web application |
+| Python | Programming and data analysis |
+| Pandas | Data cleaning and manipulation |
+| Streamlit | Interactive dashboard development |
 | Plotly | Interactive charts and visualizations |
-| CSV | Dataset format |
 
-## 📊 Dashboard Modules
+## 📂 Dataset
 
-### 1. Key Performance Indicators
-Displays important catalog metrics, including the total number of titles, movie and TV show distribution, country coverage, genre diversity, and runtime statistics.
+This project uses the **Netflix Movies and TV Shows** dataset available on Kaggle.
 
-### 2. Content Growth and Trend Analysis
-Explores yearly content additions, release-year trends, monthly patterns, and the gap between a title's release date and its addition to Netflix.
+**Dataset source:** [Netflix Movies and TV Shows – Kaggle](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+
+The dataset contains information such as:
+
+- Show ID and title
+- Director and cast
+- Country
+- Date added
+- Release year
+- Rating and duration
+- Genre and description
+
+**Note:** The CSV dataset is not included in this GitHub repository. Download it from Kaggle and place `netflix_titles.csv` in the location expected by the Python application.
+
+## 📊 Dashboard Features
+
+### 1. Content Distribution
+Explore the distribution of movies and TV shows in the dataset.
+
+### 2. Release Year Analysis
+Understand how content is distributed across different release years.
 
 ### 3. Genre Analysis
-Examines the distribution of genres and compares content categories using interactive charts.
+Explore the variety and distribution of genres available in the dataset.
 
-### 4. Global Content Analysis
-Explores country-wise content distribution and visualizes the geographical footprint of titles in the dataset.
+### 4. Rating Analysis
+Analyze the ratings and classifications of Netflix titles.
 
-### 5. Ratings and Duration Analysis
-Analyzes maturity ratings, movie runtimes, and TV show season counts.
+### 5. Country-wise Analysis
+Explore the country-wise distribution of content using the available dataset information.
 
-### 6. Content Explorer
-Provides a searchable view of individual titles, filters for exploring catalog records, title details, and CSV export functionality for selected data.
+### 6. Interactive Visualizations
+Use interactive charts to explore the dataset and understand its patterns.
 
-## 📂 Dataset Information
+## 📁 Project Structure
 
-**Dataset name:** Netflix Movies and TV Shows
+```text
+Netflix-Content-Analytics/
+├── TusheetKaurBhatia_NetflixContentAnalytics.py
+├── requirements.txt
+├── README.md
+└── TusheetKaurBhatia_ProjectReport.docx
+```
 
-**Dataset source:** [Netflix Movies and TV Shows — Kaggle](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+**Note:** The dataset file `netflix_titles.csv` must be downloaded separately and placed in the location specified in the Python code.
 
-**Original dataset size:** 8,807 records and 12 columns.
+## ⚙️ Installation and Setup
 
-The dataset includes the following fields:
+Follow these steps to run the dashboard on your computer.
 
-- `show_id` — Unique identifier for a title
-- `type` — Movie or TV Show
-- `title` — Title name
-- `director` — Director information
-- `cast` — Cast information
-- `country` — Country associated with the title
-- `date_added` — Date the title was added to Netflix
-- `release_year` — Original release year
-- `rating` — Content maturity rating
-- `duration` — Movie runtime or number of TV show seasons
-- `listed_in` — Genres or categories
-- `description` — Title description
+### Step 1: Clone the Repository
 
-**Dataset note:** This dataset contains catalog metadata. It does not provide actual viewing hours, revenue, subscription numbers, or individual viewer engagement.
+```bash
+git clone https://github.com/TusheetKaurBhatia/Netflix-Content-Analytics.git
+```
 
-## 🧹 Data Cleaning and Preparation
+### Step 2: Open the Project Folder
 
-The project involves preparing the dataset for analysis and visualization. Depending on the processing implemented in the application, this includes:
+```bash
+cd Netflix-Content-Analytics
+```
 
-- Inspecting columns, data types, and missing values.
-- Handling missing or inconsistent information.
-- Processing date and duration fields.
-- Preparing genre and country information for analysis.
-- Creating derived fields for additional analytical comparisons.
-- Organizing data for interactive charts and filtering.
+### Step 3: Download the Dataset
 
-Missing values and derived metrics should be interpreted according to the cleaning rules used in the application.
+1. Open the [Kaggle dataset page](https://www.kaggle.com/datasets/shivamb/netflix-shows).
+2. Download the dataset and extract it if required.
+3. Locate `netflix_titles.csv`.
+4. Place it in the location expected by the Python application.
 
-## 🚀 Installation and Execution
+### Step 4: Install Dependencies
 
-### Prerequisites
-
-- Python 3.10 or a compatible Python version.
-- pip package manager.
-- The project files and Netflix dataset.
-
-### Step 1: Open the Project Folder
-
-Place the project files in one folder. Ensure the dataset `netflix_titles.csv` is available at the path expected by the Python application.
-
-### Step 2: Install Dependencies
-
-Open a terminal in the project folder and run:
+Make sure Python is installed, then run:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 3: Run the Application
-
-The main Python file is:
-
-`TusheetKaurBhatia_NetflixContentAnalytics.py`
-
-Start the dashboard using:
+### Step 5: Run the Dashboard
 
 ```bash
 streamlit run TusheetKaurBhatia_NetflixContentAnalytics.py
 ```
 
-### Step 4: Open the Dashboard
+Once the application starts, Streamlit will display a local URL, usually `http://localhost:8501`.
 
-After the application starts, open the local URL displayed in the terminal. The default Streamlit address is:
+Open this address in your browser to view the dashboard while it is running.
 
-**http://localhost:8501**
+**Important:** The localhost URL works on your own computer while the application is running. It is not a public demo link. To allow your mentor and other users to access the dashboard online, the project must be deployed.
 
-You can now interact with the dashboard, explore visualizations, apply filters, and search for titles.
+## 📈 Expected Outcomes
 
-## 📈 Analytical Outcomes
-
-The dashboard supports exploration of:
-
-- The balance between movies and TV shows.
-- Changes in catalog additions over time.
-- Genre distribution and content categories.
-- Country-wise catalog representation.
-- Maturity rating and duration patterns.
-- Individual title information through interactive search and filtering.
-
-All conclusions should be based on the results displayed by the application and the underlying dataset. Catalog counts alone do not establish a title's popularity or commercial success.
+- Better understanding of Netflix's content library.
+- Identification of content distribution and release-year patterns.
+- Exploration of genre, rating, and country-wise trends.
+- Presentation of data-driven observations through interactive visualizations.
+- Practical experience with Python-based data analytics.
 
 ## ⚠️ Limitations
 
-- The dataset represents catalog information and may not reflect Netflix's current library.
-- Viewing hours, revenue, subscriptions, and audience engagement are not available.
-- Some records contain missing information.
-- Titles associated with multiple countries or genres may contribute to multiple category counts.
-- Derived metrics depend on the definitions and assumptions used during data preparation.
-- Historical patterns should not be interpreted as predictions of future performance.
+- The analysis depends on the quality and completeness of the dataset.
+- Missing values may affect some visualizations.
+- The dashboard does not automatically reflect live changes to Netflix's catalogue.
+- The dataset must be downloaded separately.
 
 ## 🔮 Future Enhancements
 
-- Integrate regularly updated catalog data.
-- Add advanced time-series analysis.
-- Apply natural language processing to title descriptions.
-- Introduce additional filtering and reporting options.
-- Integrate external datasets for further analysis where appropriate.
-- Extend the dashboard with additional analytical metrics.
+- Deploy the dashboard online for public access.
+- Add more interactive filters.
+- Include additional visualizations and trend analysis.
+- Update the dataset periodically.
+- Improve the dashboard interface and user experience.
 
 ## 👩‍💻 Author
 
 **Tusheet Kaur Bhatia**
 
-**Project Title:** Netflix Content Analytics Dashboard
+## 🙌 Acknowledgement
 
-**Project Type:** Data Analytics
-
-## 📄 Data Attribution
-
-The project uses the Netflix Movies and TV Shows dataset available on Kaggle. Dataset attribution and applicable usage terms should be respected when sharing or redistributing the data.
-
-This project is intended for educational and analytical purposes.
+The dataset used in this project is sourced from Kaggle. This project was developed for educational purposes to demonstrate skills in data analytics, Python programming, and interactive data visualization.
 
 ---
 
-*Developed using Python, Pandas, Streamlit, and Plotly.*
+*Thank you for visiting this project!*
